@@ -1,6 +1,7 @@
 const webpack = require("webpack");
 const resolve = require("path").resolve;
 const merge = require("webpack-merge");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 const common = {
   context: resolve(__dirname, "src"),
@@ -70,6 +71,11 @@ module.exports = function(env) {
           entry: ["./index.re"],
 
           plugins: [
+            new CopyWebpackPlugin([
+              {
+                from: "../public"
+              }
+            ]),
             new webpack.LoaderOptionsPlugin({
               minimize: true,
               debug: false
