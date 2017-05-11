@@ -1,0 +1,15 @@
+  {
+    "name": "reason-react-webpack-starter-kit",
+    "reason": {
+      "react-jsx": true
+    },
+    "bs-dependencies": [
+      "reason-react",
+      "reason-js"
+    ],
+    "sources": [
+      {
+        "dir": "src"
+      }
+    ]
+  }
