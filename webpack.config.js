@@ -35,7 +35,7 @@ const common = {
       },
       {
         test: /\.(re|ml)$/,
-        use: "bs-loader"
+        use: "bs-loader?errorType=warning"
       }
     ]
   }
