@@ -3,49 +3,51 @@ const resolve = require("path").resolve;
 const merge = require("webpack-merge");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 
-const common = {
-  context: resolve(__dirname, "src"),
+const common = env => {
+  return {
+    context: resolve(__dirname, "src"),
 
-  resolve: {
-    extensions: [".re", ".ml", ".js", ".scss"]
-  },
+    resolve: {
+      extensions: [".re", ".ml", ".js", ".scss"]
+    },
 
-  output: {
-    filename: "bundle.js",
-    path: resolve(__dirname, "dist"),
-    publicPath: "/"
-  },
+    output: {
+      filename: "bundle.js",
+      path: resolve(__dirname, "dist"),
+      publicPath: "/"
+    },
 
-  devtool: "inline-source-map",
+    devtool: "inline-source-map",
 
-  module: {
-    rules: [
-      {
-        test: /\.jsx?$/,
-        use: ["babel-loader"],
-        exclude: /node_modules/
-      },
-      {
-        test: /\.scss$/,
-        use: ["style-loader", "css-loader?modules", "sass-loader"]
-      },
-      {
-        test: /\.(png|svg|jpg|gif)$/,
-        use: ["file-loader"]
-      },
-      {
-        test: /\.(re|ml)$/,
-        use: "bs-loader?errorType=warning"
-      }
-    ]
-  }
+    module: {
+      rules: [
+        {
+          test: /\.jsx?$/,
+          use: ["babel-loader"],
+          exclude: /node_modules/
+        },
+        {
+          test: /\.scss$/,
+          use: ["style-loader", "css-loader?modules", "sass-loader"]
+        },
+        {
+          test: /\.(png|svg|jpg|gif)$/,
+          use: ["file-loader"]
+        },
+        {
+          test: /\.(re|ml)$/,
+          use: "bs-loader" + (env === "dev" ? "?errorType=warning" : "")
+        }
+      ]
+    }
+  };
 };
 
 const devSrvPort = 3000;
 
 module.exports = function(env) {
   return merge(
-    common,
+    common(env),
     env === "dev"
       ? {
           entry: [
