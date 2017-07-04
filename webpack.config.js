@@ -36,7 +36,7 @@ const common = env => {
         },
         {
           test: /\.(re|ml)$/,
-          use: "bs-loader" + (env === "dev" ? "?errorType=warning" : "")
+          use: "bs-loader"
         }
       ]
     }
