@@ -898,13 +898,9 @@ browserslist@^1.3.6, browserslist@^1.5.2, browserslist@^1.7.6:
     caniuse-db "^1.0.30000639"
     electron-to-chromium "^1.2.7"
 
-bs-fetch@BuckleTypes/bs-fetch:
-  version "0.1.1"
-  resolved "https://codeload.github.com/BuckleTypes/bs-fetch/tar.gz/076782cdd0b39e0fe61bf996294702663f339088"
-
-bs-loader@^1.5.3:
-  version "1.5.3"
-  resolved "https://registry.yarnpkg.com/bs-loader/-/bs-loader-1.5.3.tgz#e4dcfdbe69f7240584084e365e126f57dabb9141"
+bs-loader@^1.5.7:
+  version "1.5.7"
+  resolved "https://registry.yarnpkg.com/bs-loader/-/bs-loader-1.5.7.tgz#e6dc7c86496fe79bc662eb2f9033a78bc3cd0c89"
   dependencies:
     loader-utils "^1.1.0"
 
@@ -3572,12 +3568,6 @@ readdirp@^2.0.0:
     minimatch "^3.0.2"
     readable-stream "^2.0.2"
     set-immediate-shim "^1.0.1"
-
-reason-js@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/reason-js/-/reason-js-0.3.0.tgz#87ef218bf10e4e9be93bc44b459bec2c60cfdd02"
-  dependencies:
-    bs-fetch BuckleTypes/bs-fetch
 
 reason-react@^0.1.5:
   version "0.1.5"

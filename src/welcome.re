@@ -7,6 +7,6 @@ let make ::name _ => {
   render: fun () _ =>
     <div className=style>
       <img src=logo />
-      <h1> ("Hello, " ^ name |> ReactRe.stringToElement) </h1>
+      <h1> ("Hello " ^ name |> ReactRe.stringToElement) </h1>
     </div>
 };
