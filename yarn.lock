@@ -3569,9 +3569,9 @@ readdirp@^2.0.0:
     readable-stream "^2.0.2"
     set-immediate-shim "^1.0.1"
 
-reason-react@^0.1.5:
-  version "0.1.5"
-  resolved "https://registry.yarnpkg.com/reason-react/-/reason-react-0.1.5.tgz#2eae108936ff7d7b6c2148bf07000f18c75b2934"
+reason-react@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/reason-react/-/reason-react-0.2.1.tgz#86c2bde4ac1d8fb5cf39a3ceaf8ce1fa53aa9fd3"
   dependencies:
     create-react-class "^15.0.0"
 
