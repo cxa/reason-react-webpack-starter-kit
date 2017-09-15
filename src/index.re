@@ -1,4 +1,4 @@
-ReactDOMRe.renderToElementWithId <Welcome name="ReasonML" /> "root";
+ReactDOMRe.renderToElementWithId <Welcome /> "root";
 
 [%bs.raw
   {|

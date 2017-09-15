@@ -60,6 +60,7 @@ module.exports = function(env) {
           devServer: {
             hot: true,
             port: devSrvPort,
+            open: true,
             contentBase: resolve(__dirname, "public"),
             publicPath: "/"
           },
