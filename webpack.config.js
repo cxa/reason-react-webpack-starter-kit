@@ -22,11 +22,6 @@ const common = env => {
     module: {
       rules: [
         {
-          test: /\.jsx?$/,
-          use: ["babel-loader"],
-          exclude: /node_modules/
-        },
-        {
           test: /\.scss$/,
           use: ["style-loader", "css-loader?modules", "sass-loader"]
         },
