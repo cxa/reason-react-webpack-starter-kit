@@ -8,7 +8,7 @@
     "dist": "rimraf ./dist && webpack --env=dist"
   },
   "devDependencies": {
-    "bs-loader": "^1.8.0",
+    "bs-loader": "^1.8.1",
     "bs-platform": "^1.9.3",
     "copy-webpack-plugin": "^4.1.0",
     "css-loader": "^0.28.7",
